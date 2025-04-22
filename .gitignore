@@ -1,0 +1,88 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest and other test-related files
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+
+# Environment variable files
+.env
+.env.*
+venv/
+
+# Logs and temp files
+*.log
+*.out
+*.tmp
+*.bak
+*.swp
+
+# MyPy / Pyre / Pytype type checker results
+.mypy_cache/
+.pyre/
+.pytype/
+
+# VS Code settings
+.vscode/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Model artifacts / data
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.pkl
+*.sav
+
+# Large datasets or data folders
+data/
+datasets/
+outputs/
+results/
+checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Pip tools
+pip-wheel-metadata/
+pip-log.txt
+
+# Jupyter Notebook metadata
+.ipynb_checkpoints/
+
+# Python packaging
+MANIFEST
+
+# Node / frontend stuff (if using frontend)
+node_modules/
+*.tsbuildinfo
+
+# Optional: ignore entire .idea folder if using PyCharm
+.idea/
