@@ -2,7 +2,7 @@
 
 ## Overview
 ![DataSage Banner](./docs/pro.png)
-**DataSage** is a powerful data analysis application that leverages AI to provide insights from your data. With a user-friendly Streamlit interface and integration with advanced language models, DataSage allows you to ask natural language questions about your datasets and receive meaningful answers.
+**DataSage** is a data analysis application that leverages AI to provide insights from your data. With a user-friendly Streamlit interface and integration with advanced language models, DataSage allows you to ask natural language questions about your datasets and receive meaningful answers.
 
 ---
 
