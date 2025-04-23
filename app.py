@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
+import os
 from src.DataSage.ai_agent import AnalystAgent
 from src.DataSage.ollama_handlers import ollama_llm_api
 from src.DataSage.config import Config
-import os
+from src.DataSage.data_to_panda import transform_csv_to_pandas
+
 
 # Sample DataFrame
 data = {
@@ -26,7 +28,7 @@ st.title("📊 Data Analyst Agent")
 st.write("Ask a question about the dataset:")
 
 
-def file_selector(folder_path="."):
+def file_selector(folder_path=".\data"):
     filenames = os.listdir(folder_path)
     selected_filename = st.selectbox("Select a file", filenames)
     return os.path.join(folder_path, selected_filename)
@@ -35,8 +37,12 @@ def file_selector(folder_path="."):
 filename = file_selector()
 st.write("You selected `%s`" % filename)
 
-user_query = st.text_input(
-    "Your question", placeholder="e.g. What is the city with the highest population?"
+df = transform_csv_to_pandas(filename)
+st.write("### 📊 Data Preview")
+st.dataframe(df.head())
+
+user_query = st.chat_input(
+    placeholder="e.g. What is the city with the highest population?"
 )
 
 if user_query:
